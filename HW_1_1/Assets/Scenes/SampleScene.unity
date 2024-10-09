@@ -244,8 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 379503331}
-  target1: {fileID: 379503330}
-  target2: {fileID: 1892502574}
+  target: {fileID: 1892502574}
   detectionRadius: 0.25
 --- !u!135 &379503333
 SphereCollider:
@@ -942,8 +941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 379503331}
-  target1: {fileID: 1892502574}
-  target2: {fileID: 379503330}
+  target: {fileID: 379503330}
   detectionRadius: 0.25
 --- !u!95 &1892502577
 Animator:
