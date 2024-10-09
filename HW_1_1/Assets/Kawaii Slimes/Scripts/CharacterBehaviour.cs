@@ -3,48 +3,25 @@ using UnityEngine;
 public class CharacterBehavior : MonoBehaviour
 {
     public Animator animator;
+    public GameObject target; 
     public float detectionRadius = 0.25f;
-
-
-    void Start()
-    {
-        if (animator == null)
-        {
-            animator = GetComponent<Animator>();
-        }
-    }
 
 
     void Update()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, detectionRadius);
-        bool isAttacking = false;
 
-        foreach (var hitCollider in hitColliders)
+        if (target)
         {
-            Debug.Log("Detected: " + hitCollider.gameObject.name);
 
-            if (hitCollider.gameObject != gameObject) 
+            float distance = Vector3.Distance(target.transform.position, transform.position);
+            bool isAttacking = distance <= detectionRadius;
+
+            animator.SetBool("isAttacking", isAttacking);
+
+            if (isAttacking)
             {
-                isAttacking = true; 
-                break;
+                Debug.Log("Attack initiated: Targets are close.");
             }
         }
-
-        if (isAttacking)
-        {
-            Debug.Log("Character is attacking");
-            animator.SetBool("isAttacking", true);
-        }
-        else
-        {
-            animator.SetBool("isAttacking", false);
-        }
-    }
-
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }
 }
