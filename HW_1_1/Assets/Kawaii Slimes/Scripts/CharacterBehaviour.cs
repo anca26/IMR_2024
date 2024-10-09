@@ -15,6 +15,11 @@ public class CharacterBehavior : MonoBehaviour
     }
 
 
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     void Update()
     {
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, detectionRadius);
