@@ -1,0 +1,54 @@
+{
+    "name": "XRSimulatorActions",
+    "maps": [
+        {
+            "name": "Bat",
+            "id": "1cd8f863-a4cd-4fc7-8987-5a220307f4e2",
+            "actions": [
+                {
+                    "name": "Grab",
+                    "type": "Button",
+                    "id": "9b485e34-25c5-4914-afaa-0c657567f801",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Hit",
+                    "type": "Button",
+                    "id": "ca9839ea-f6d5-4691-92d8-cf56b40bb7c4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d6e603aa-a08e-46a5-9e6f-858757360b3b",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Grab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "21072222-3fdc-48e8-baff-05f98bde6ee5",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
